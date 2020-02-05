@@ -1,0 +1,19 @@
+<div>
+    <label class="switch">
+        <input type="checkbox" checked [(ngModel)]="day.active">
+        <span class="slider round"></span>
+      </label>
+    <div>{{day.date}}</div>
+    <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
+    <timepicker [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+    <timepicker [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+    <timepicker [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+    <timepicker [(ngModel)]="day.worktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+
+    <div>{{day.active}}</div>
+    <div>{{day.date}}</div>
+    <div>{{day.start}}</div>
+    <div>{{day.end}}</div>
+    <div>{{day.break}}</div>
+    <div>{{day.worktime}}</div>
+</div>
