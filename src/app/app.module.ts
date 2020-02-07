@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { DayComponent } from './day/day.component';
 import { MonthComponent } from './month/month.component';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { SliderComponent } from './slider/slider.component';
+import { WeekComponent } from './week/week.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DayComponent,
-    MonthComponent
+    MonthComponent,
+    SliderComponent,
+    WeekComponent
   ],
   imports: [
     BrowserModule,

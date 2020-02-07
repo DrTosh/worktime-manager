@@ -1,19 +1,23 @@
-<div>
-    <label class="switch">
-        <input type="checkbox" checked [(ngModel)]="day.active">
-        <span class="slider round"></span>
-      </label>
-    <div>{{day.date}}</div>
-    <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
-    <timepicker [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-    <timepicker [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-    <timepicker [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-    <timepicker [(ngModel)]="day.worktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-
-    <div>{{day.active}}</div>
-    <div>{{day.date}}</div>
-    <div>{{day.start}}</div>
-    <div>{{day.end}}</div>
-    <div>{{day.break}}</div>
-    <div>{{day.worktime}}</div>
+<div class="col slider-container">
+    <slider [(inputModel)]="day.active"></slider>
 </div>
+
+<div class="col date-container">
+    <div>{{day.date | date}}</div>
+</div>
+
+<timepicker class="col" [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+<timepicker class="col" [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+<timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+<timepicker class="col" [(ngModel)]="day.actualworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+<timepicker class="col" [(ngModel)]="day.targetworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+
+<!-- <div class="row">
+        <div class="col">{{day.active}}</div>
+        <div class="col">{{day.date | date}}</div>
+        <div class="col">{{day.start | date:'HH:mm'}}</div>
+        <div class="col">{{day.end | date:'HH:mm'}}</div>
+        <div class="col">{{day.break | date:'HH:mm'}}</div>
+        <div class="col">{{day.actualworktime | date:'HH:mm'}}</div>
+        <div class="col">{{day.targetworktime | date:'HH:mm'}}</div>
+    </div> -->

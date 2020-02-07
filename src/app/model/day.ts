@@ -6,5 +6,6 @@ export class Day {
     start: Date;
     end: Date;
     break: Date;
-    worktime: Date;
+    actualworktime: Date;
+    targetworktime: Date;
 }
