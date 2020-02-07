@@ -6,11 +6,11 @@
     <div>{{day.date | date}}</div>
 </div>
 
-<timepicker class="col" [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-<timepicker class="col" [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-<timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-<timepicker class="col" [(ngModel)]="day.actualworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
-<timepicker class="col" [(ngModel)]="day.targetworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1"></timepicker>
+<timepicker class="col" [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.actualworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.targetworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
 
 <!-- <div class="row">
         <div class="col">{{day.active}}</div>
