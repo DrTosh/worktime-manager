@@ -1,15 +1,17 @@
 <div class="container">
     <div class="row text-center">
         <div class="col">Arbeiten</div>
-        <div class="col">Datum</div>
-        <div class="col">Start</div>
-        <div class="col">Ende</div>
-        <div class="col">Pause</div>
-        <div class="col">Arbeitszeit Ist</div>
-        <div class="col">Arbeitszeit Soll</div>
+        <div class="col header-border">Datum</div>
+        <div class="col header-border">Start</div>
+        <div class="col header-border">Ende</div>
+        <div class="col header-border">Pause</div>
+        <div class="col header-border">Arbeitszeit Ist</div>
+        <div class="col header-border">Arbeitszeit Soll</div>
     </div>
 
-    <app-week></app-week>
-    <!-- <app-day *ngFor='let key of [].constructor(5)'></app-day>
-    <app-day *ngFor='let key of [].constructor(5)'></app-day> -->
+    <app-week *ngFor='let key of [].constructor(4)'></app-week>
+
+    <div class="month-total">
+
+    </div>
 </div>

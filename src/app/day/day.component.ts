@@ -9,16 +9,7 @@ import { Day } from '../model/day';
 })
 export class DayComponent implements OnInit {
   mytime: Date = new Date();
-  day: Day = {
-    active: true,
-    date: new Date(),
-    start: new Date(),
-    end: new Date(),
-    break: new Date(),
-    actualworktime: new Date(),
-    targetworktime: new Date()
-  };
-
+  day: Day = Day.create(new Date("2020-01-01T00:00:00"));
   constructor() { }
   ngOnInit() { }
 }
