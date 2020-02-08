@@ -7,12 +7,13 @@ import { Month } from '../model/month';
   styleUrls: ['./month.component.css']
 })
 export class MonthComponent implements OnInit {
+  month: Month;
 
   constructor() { }
 
-  ngOnInit() { 
-    let month = new Month(2020, 2);
-    month.createWeeks();
-    console.log(month);
+  ngOnInit() {
+    this.month = new Month(2020, 1);
+    this.month.createWeeks();
+    console.log(this.month);
   }
 }

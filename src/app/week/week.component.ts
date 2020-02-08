@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Week } from '../model/week';
 
 @Component({
   selector: 'app-week',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./week.component.css']
 })
 export class WeekComponent implements OnInit {
-
+  @Input() week: Week = new Week();
   constructor() { }
 
   ngOnInit() { }

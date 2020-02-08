@@ -1,8 +1,9 @@
 <div class="week-container">
-    <app-day *ngFor='let key of [].constructor(5)'></app-day>
+    <app-day *ngFor='let day of week.days' [(day)]="day"></app-day>
 
     <div class="row text-center week-total">
         <div class="col">Woche</div>
+        <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
         <div class="col"></div>
