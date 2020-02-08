@@ -1,3 +1,7 @@
 .header-border {
     border-left: 1px solid grey;
 }
+
+.main-container {
+    margin: 25px;
+}

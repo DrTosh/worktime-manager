@@ -1,7 +1,8 @@
-<div class="container">
+<div class="main-container">
     <div class="row text-center">
         <div class="col">Arbeiten</div>
         <div class="col header-border">Datum</div>
+        <div class="col header-border">Wochentag</div>
         <div class="col header-border">Start</div>
         <div class="col header-border">Ende</div>
         <div class="col header-border">Pause</div>
@@ -9,9 +10,8 @@
         <div class="col header-border">Arbeitszeit Soll</div>
     </div>
 
-    <app-week *ngFor='let key of [].constructor(4)'></app-week>
+    <app-week *ngFor='let week of month.weeks' [(week)]="week"></app-week>
 
     <div class="month-total">
-
     </div>
 </div>

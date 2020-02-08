@@ -6,6 +6,10 @@
     <div>{{day.date | date}}</div>
 </div>
 
+<div class="col weekday-container">
+    <div>{{day.date | date:'EEEE'}}</div>
+</div>
+
 <timepicker class="col" [(ngModel)]="day.start" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
 <timepicker class="col" [(ngModel)]="day.end" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
 <timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
