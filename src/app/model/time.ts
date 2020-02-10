@@ -7,6 +7,11 @@ export class Time {
         this.minutes = minutes;
     }
 
+    public toString = (): string => {
+        return this.hours + ":" + this.minutes;
+    }
+
+    // operator functions
     add(time: Time) {
         this.hours += time.hours;
         this.minutes += time.minutes;
