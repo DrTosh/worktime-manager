@@ -19,4 +19,9 @@ export class WeekComponent implements OnInit {
   }
 
   ngOnInit() { }
+
+  changed() {
+    console.log("week update");
+    this.worktimeController.weekController.calcTimeSum(this.week);
+  }
 }
