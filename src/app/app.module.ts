@@ -4,11 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DayComponent } from './day/day.component';
-import { MonthComponent } from './month/month.component';
+import { DayComponent } from './view/day/day.component';
+import { MonthComponent } from './view/month/month.component';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
-import { SliderComponent } from './slider/slider.component';
-import { WeekComponent } from './week/week.component';
+import { SliderComponent } from './view/components/slider/slider.component';
+import { WeekComponent } from './view/week/week.component';
+import { WorkTime } from './model/worktime';
+import { WorkTimeController } from './controller/worktime-controller';
+import { TimeInputComponent } from './view/components/time-input/time-input.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { WeekComponent } from './week/week.component';
     DayComponent,
     MonthComponent,
     SliderComponent,
-    WeekComponent
+    WeekComponent,
+    TimeInputComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,10 @@ import { WeekComponent } from './week/week.component';
     FormsModule,
     TimepickerModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    WorkTime,
+    WorkTimeController
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

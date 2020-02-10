@@ -11,7 +11,8 @@
 }
 
 .slider-container,
-.date-container {
+.date-container,
+.weekday-container {
     display: flex;
     flex-direction: row;
     justify-content: center;

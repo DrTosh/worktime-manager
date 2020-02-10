@@ -1,0 +1,34 @@
+<div class="col slider-container">
+    <slider [(inputModel)]="day.active"></slider>
+</div>
+
+<div class="col date-container">
+    <div>{{day.date | date}}</div>
+</div>
+
+<div class="col weekday-container">
+    <div>{{day.date | date:'EEEE'}}</div>
+</div>
+
+<!-- <timepicker class="col" [(ngModel)]="day.start" (ngModelChange)="startChanged()" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker> -->
+<time-input class="col" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
+<time-input class="col" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
+<time-input class="col" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
+<time-input class="col" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
+<time-input class="col" [(time)]="day.targetworktime"></time-input>
+<!-- <timepicker class="col" [(ngModel)]="day.end" (ngModelChange)="endChanged()" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.actualworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
+<timepicker class="col" [(ngModel)]="day.targetworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker> -->
+
+<!-- <button (click)="test()"> -->
+
+<!-- <div class="row">
+    <div class="col">{{day.active}}</div>
+    <div class="col">{{day.date | date}}</div>
+    <div class="col">{{day.start | date:'HH:mm'}}</div>
+    <div class="col">{{day.end | date:'HH:mm'}}</div>
+    <div class="col">{{day.break | date:'HH:mm'}}</div>
+    <div class="col">{{day.actualworktime | date:'HH:mm'}}</div>
+    <div class="col">{{day.targetworktime | date:'HH:mm'}}</div>
+</div> -->

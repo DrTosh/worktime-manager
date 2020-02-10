@@ -1,0 +1,31 @@
+* {
+    color: white;
+    font-weight: bold;
+}
+
+:host {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+}
+
+input {
+    height: 38px;
+    width: 50px;
+    padding: 5px;
+    background-color: grey;
+    border-width: 0;
+    border-radius: 5px;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div {
+    line-height: 38px;
+    padding: 0 5px;
+}

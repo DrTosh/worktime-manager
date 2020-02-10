@@ -8,14 +8,14 @@ export class Week {
 
     constructor() {
         this.days = [];
-        this.actualworktime = { hours: 0, minutes: 0 }; 
-        this.targetworktime = { hours: 0, minutes: 0 }; 
+        this.actualworktime = { hours: 0, minutes: 0 };
+        this.targetworktime = { hours: 0, minutes: 0 };
     }
 
     calcWorkTime() {
         this.days.forEach(function (day) {
             this.actualworktime += day.actualworktime;
             this.targetworktime += day.targetworktime;
-        });        
+        });
     }
 }
