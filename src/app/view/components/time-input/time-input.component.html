@@ -1,5 +1,5 @@
 <div></div>
-<input type="number" checked [(ngModel)]="time.hours" (ngModelChange)="timeModelChange.emit(time)" />
+<input type="number" checked [ngModel]="time.hours | number:'2.0'" (ngModelChange)="time.hours=$event; timeModelChange.emit(time)" />
 <div>:</div>
-<input type="number" checked [(ngModel)]="time.minutes" (ngModelChange)="timeModelChange.emit(time)" />
+<input type="number" checked [ngModel]="time.minutes | number: '2.0'" (ngModelChange)="time.minutes=$event; timeModelChange.emit(time)" />
 <div></div>
