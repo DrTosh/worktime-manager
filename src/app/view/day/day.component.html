@@ -10,18 +10,11 @@
     <div>{{day.date | date:'EEEE'}}</div>
 </div>
 
-<!-- <timepicker class="col" [(ngModel)]="day.start" (ngModelChange)="startChanged()" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker> -->
 <time-input class="col" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
 <time-input class="col" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
 <time-input class="col" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
 <time-input class="col" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
-<time-input class="col" [(time)]="day.targetworktime"></time-input>
-<!-- <timepicker class="col" [(ngModel)]="day.end" (ngModelChange)="endChanged()" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
-<timepicker class="col" [(ngModel)]="day.break" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
-<timepicker class="col" [(ngModel)]="day.actualworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker>
-<timepicker class="col" [(ngModel)]="day.targetworktime" [showMeridian]="false" [showSpinners]="false" [minuteStep]="1" [mousewheel]="false"></timepicker> -->
-
-<!-- <button (click)="test()"> -->
+<time-input class="col" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
 
 <!-- <div class="row">
     <div class="col">{{day.active}}</div>
