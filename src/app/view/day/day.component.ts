@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Day } from '../../model/day';
 import { WorkTime } from 'src/app/model/worktime';
 import { WorkTimeController } from 'src/app/controller/worktime-controller';
@@ -11,7 +11,8 @@ import { WorkTimeController } from 'src/app/controller/worktime-controller';
 })
 export class DayComponent implements OnInit {
   @Input() day: Day;
-  // day: Day = new Day(new Date());
+  @Output() dayChanged: EventEmitter<Day> = new EventEmitter<Day>();
+
   worktime: WorkTime;
   worktimeController: WorkTimeController;
 
@@ -26,13 +27,16 @@ export class DayComponent implements OnInit {
 
   timesChanged() {
     this.worktimeController.dayController.calcByTimeSpan(this.day);
+    this.dayChanged.emit(this.day);
   }
 
   breakChanged() {
     this.worktimeController.dayController.calcByBreak(this.day);
+    this.dayChanged.emit(this.day);
   }
 
   actualTimeChanged() {
     this.worktimeController.dayController.calcByWorkTime(this.day);
+    this.dayChanged.emit(this.day);
   }
 }
