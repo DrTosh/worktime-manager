@@ -18,14 +18,4 @@ export class Day {
         this.actualworktime = new Time(0, 0);
         this.targetworktime = new Time(0, 0);
     }
-
-    // constructor (day: Day) {
-    //     this.active = true;
-    //     this.date = new Date("2020-01-01T00:00:00");
-    //     this.start = new Date("2020-01-01T00:00:00");
-    //     this.end = new Date("2020-01-01T00:00:00");
-    //     this.break = new Date("2020-01-01T00:00:00");
-    //     this.actualworktime = new Date("2020-01-01T00:00:00");
-    //     this.targetworktime = new Date("2020-01-01T00:00:00");
-    // } 
 }
