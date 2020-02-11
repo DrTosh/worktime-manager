@@ -1,27 +1,29 @@
-<div class="col slider-container">
-    <slider [(inputModel)]="day.active"></slider>
+<div class="row text-center" [ngClass]="{'not-visible': day.active == false && worktime.isExpand == false}">
+    <div class="col slider-container">
+        <slider [(inputModel)]="day.active"></slider>
+    </div>
+
+    <div class="col date-container">
+        <div>{{day.date | date}}</div>
+    </div>
+
+    <div class="col weekday-container">
+        <div>{{day.date | date:'EEEE'}}</div>
+    </div>
+
+    <time-input class="col" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
+    <time-input class="col" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
+    <time-input class="col" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
+    <time-input class="col" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
+    <time-input class="col" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
+
+    <!-- <div class="row">
+        <div class="col">{{day.active}}</div>
+        <div class="col">{{day.date | date}}</div>
+        <div class="col">{{day.start | date:'HH:mm'}}</div>
+        <div class="col">{{day.end | date:'HH:mm'}}</div>
+        <div class="col">{{day.break | date:'HH:mm'}}</div>
+        <div class="col">{{day.actualworktime | date:'HH:mm'}}</div>
+        <div class="col">{{day.targetworktime | date:'HH:mm'}}</div>
+    </div> -->
 </div>
-
-<div class="col date-container">
-    <div>{{day.date | date}}</div>
-</div>
-
-<div class="col weekday-container">
-    <div>{{day.date | date:'EEEE'}}</div>
-</div>
-
-<time-input class="col" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
-<time-input class="col" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
-<time-input class="col" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
-<time-input class="col" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
-<time-input class="col" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
-
-<!-- <div class="row">
-    <div class="col">{{day.active}}</div>
-    <div class="col">{{day.date | date}}</div>
-    <div class="col">{{day.start | date:'HH:mm'}}</div>
-    <div class="col">{{day.end | date:'HH:mm'}}</div>
-    <div class="col">{{day.break | date:'HH:mm'}}</div>
-    <div class="col">{{day.actualworktime | date:'HH:mm'}}</div>
-    <div class="col">{{day.targetworktime | date:'HH:mm'}}</div>
-</div> -->

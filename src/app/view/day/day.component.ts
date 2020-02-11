@@ -6,8 +6,9 @@ import { WorkTimeController } from 'src/app/controller/worktime-controller';
 @Component({
   selector: 'app-day',
   templateUrl: './day.component.html',
-  styleUrls: ['./day.component.css'],
-  host: { 'class': 'row text-center' }
+  styleUrls: ['./day.component.css']
+  // ,
+  // host: { 'class': 'row text-center' }
 })
 export class DayComponent implements OnInit {
   @Input() day: Day;

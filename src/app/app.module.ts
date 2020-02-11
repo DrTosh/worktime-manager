@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { WeekComponent } from './view/week/week.component';
 import { WorkTime } from './model/worktime';
 import { WorkTimeController } from './controller/worktime-controller';
 import { TimeInputComponent } from './view/components/time-input/time-input.component';
+import { VisibleToggleComponent } from './view/components/visible-toggle/visible-toggle.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { TimeInputComponent } from './view/components/time-input/time-input.comp
     MonthComponent,
     SliderComponent,
     WeekComponent,
-    TimeInputComponent
+    TimeInputComponent,
+    VisibleToggleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    TimepickerModule.forRoot()
+    TimepickerModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [
     WorkTime,

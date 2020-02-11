@@ -1,4 +1,8 @@
 <div class="main-container">
+    <div class="row month-info">
+        <visible-toggle [(isVisible)]="worktime.isExpand"></visible-toggle>
+    </div>
+
     <div class="row text-center">
         <div class="col">Arbeiten</div>
         <div class="col header-border">Datum</div>
@@ -11,7 +15,4 @@
     </div>
 
     <app-week *ngFor='let week of month.weeks' [(week)]="week"></app-week>
-
-    <div class="month-total">
-    </div>
 </div>

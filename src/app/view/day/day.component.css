@@ -1,13 +1,43 @@
-::ng-deep timepicker table {
-    margin: 0 auto;
+.not-visible {
+    /* visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: height 1s, opacity 1s linear; */
+    overflow: hidden;
+    height: 0px;
+    margin: 0px !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-::ng-deep .bs-timepicker-field {
-    background-color: grey;
-    color: white;
-    border-width: 0;
-    font-weight: bold;
-    /* box-shadow: inset 0 0 10px #000000; */
+.not-visible * {
+    display: none;
+    Hier weiter machen,
+    warum gibt es immer noch einen kleinen Abstand?
+}
+
+.row {
+    transition: max-height 1s ease-out, padding 500ms ease-out;
+}
+
+@keyframes myAnimation {
+    0% {
+        opacity: 1;
+        transform: rotateX(90deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotateX(0deg);
+    }
+    90% {
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+    100% {
+        display: none;
+    }
 }
 
 .slider-container,

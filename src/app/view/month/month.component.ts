@@ -13,6 +13,8 @@ export class MonthComponent implements OnInit {
   worktime: WorkTime;
   worktimeController: WorkTimeController;
 
+  isExpand: boolean = false;
+
   constructor(worktime: WorkTime, workTimeController: WorkTimeController) {
     this.worktime = worktime;
     this.worktimeController = workTimeController;
@@ -22,5 +24,10 @@ export class MonthComponent implements OnInit {
     this.month = this.worktime.month;
     this.month.createWeeks();
     console.log(this.month);
+  }
+
+  visibleChanged() {
+    console.log("month");
+    console.log(this.worktime.isExpand);
   }
 }
