@@ -6,8 +6,9 @@ body {
 }
 
 .row {
+    transition: .6s ease-out;
     background-color: #36393f;
     box-shadow: 10px 10px 5px black;
-    margin: 10px 0px !important;
+    margin: 10px 0px 0px 0px !important;
     padding: 10px;
 }

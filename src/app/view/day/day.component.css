@@ -1,43 +1,13 @@
 .not-visible {
-    /* visibility: hidden;
-    opacity: 0;
-    height: 0;
-    padding: 0 !important;
-    margin: 0 !important;
-    transition: height 1s, opacity 1s linear; */
     overflow: hidden;
-    height: 0px;
+    height: 0px !important;
     margin: 0px !important;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
-.not-visible * {
-    display: none;
-    Hier weiter machen,
-    warum gibt es immer noch einen kleinen Abstand?
-}
-
 .row {
-    transition: max-height 1s ease-out, padding 500ms ease-out;
-}
-
-@keyframes myAnimation {
-    0% {
-        opacity: 1;
-        transform: rotateX(90deg);
-    }
-    50% {
-        opacity: 0.5;
-        transform: rotateX(0deg);
-    }
-    90% {
-        opacity: 0;
-        transform: rotateX(90deg);
-    }
-    100% {
-        display: none;
-    }
+    height: 60px;
 }
 
 .slider-container,
