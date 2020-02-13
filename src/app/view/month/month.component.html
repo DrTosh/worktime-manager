@@ -1,7 +1,7 @@
 <div class="main-container">
     <div class="row month-info">
         <h1>Worktime Manager</h1>
-        <select>
+        <select class="col-sm-2 dropdown" [(ngModel)]="worktime.currentMonth">
             <option value="0">January</option>
             <option value="1">February</option>
             <option value="2">March</option>
@@ -15,7 +15,11 @@
             <option value="10">October</option>
             <option value="11">December</option>
         </select>
-        <visible-toggle [(isVisible)]="worktime.isExpand"></visible-toggle>
+
+        <select class="col-sm-2 dropdown" [(ngModel)]="worktime.currentYear">
+            <option *ngFor="let year of worktime.availableYears" [ngValue]="year">{{year}}</option>
+        </select>
+        <visible-toggle class="col-sm-1" [(isVisible)]="worktime.isExpand"></visible-toggle>
     </div>
 
     <div class="row text-center">

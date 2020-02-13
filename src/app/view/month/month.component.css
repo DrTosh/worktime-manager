@@ -10,3 +10,14 @@ h1 {
 .main-container {
     margin: 25px;
 }
+
+.dropdown {
+    margin: 10px;
+    height: 40px;
+    color: white;
+    background-color: grey;
+    border-width: 0;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+    outline: none;
+}
