@@ -5,15 +5,17 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class WorkTime {
     month: Month = new Month(2020, 2);
-    public isExpand: boolean = false;
+    isExpand: boolean;
+    currentMonth: number;
+    currentYear: number;
+    availableYears: number[] = [2019, 2020];
 
-    public getMonth(): any {
-        const monthObservable = new Observable(observer => {
-            setTimeout(() => {
-                observer.next(this.month);
-            }, 1000);
-        });
+    constructor() {
+        this.month = new Month(2020, 2);
+        this.isExpand = false;
+        this.currentMonth = new Date().getMonth();
+        this.currentYear = new Date().getFullYear();
 
-        return monthObservable;
+        console.log(this);
     }
 }
