@@ -28,7 +28,7 @@ export class Month {
             }
 
             date.setDate(date.getDate() + 1);
-            console.log(date);
+            // console.log(date);
         }
     }
 }

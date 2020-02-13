@@ -15,9 +15,4 @@ export class VisibleToggleComponent implements OnInit {
 
   constructor() { }
   ngOnInit() { }
-
-  change() {
-    console.log("component");
-    console.log(this.isVisible);
-  }
 }
