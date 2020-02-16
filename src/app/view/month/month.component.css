@@ -11,13 +11,44 @@ h1 {
     margin: 25px;
 }
 
+visible-toggle {
+    padding: auto;
+    text-align: center;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .dropdown {
-    margin: 10px;
     height: 40px;
+    width: 100%;
     color: white;
     background-color: grey;
     border-width: 0;
     box-shadow: 2px 2px 5px black;
     cursor: pointer;
     outline: none;
+}
+
+.label-control-container div {
+    margin-top: auto;
+    text-align: left;
+}
+
+.label-control-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-control-container label {
+    display: block;
+}
+
+#actualtime,
+#actualmoney,
+#targettime,
+#targetmoney {
+    font-size: x-large;
+    color: #59f37d;
 }

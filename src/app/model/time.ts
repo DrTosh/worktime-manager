@@ -11,6 +11,10 @@ export class Time {
         return this.hours + ":" + this.minutes;
     }
 
+    public toNumber = (): number => {
+        return this.hours + this.minutes / 60;
+    }
+
     // operator functions
     add(time: Time) {
         this.hours += time.hours;

@@ -9,13 +9,13 @@ export class WorkTime {
     currentMonth: number;
     currentYear: number;
     availableYears: number[] = [2019, 2020];
+    wage: number;
 
     constructor() {
         this.month = new Month(2020, 2);
         this.isExpand = false;
         this.currentMonth = new Date().getMonth();
         this.currentYear = new Date().getFullYear();
-
-        console.log(this);
+        this.wage = 15;
     }
 }

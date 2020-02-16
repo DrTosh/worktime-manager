@@ -1,37 +1,71 @@
 <div class="main-container">
     <div class="row month-info">
         <h1>Worktime Manager</h1>
-        <select class="col-sm-2 dropdown" [(ngModel)]="worktime.currentMonth">
-            <option value="0">January</option>
-            <option value="1">February</option>
-            <option value="2">March</option>
-            <option value="3">April</option>
-            <option value="4">May</option>
-            <option value="5">June</option>
-            <option value="6">July</option>
-            <option value="7">August</option>
-            <option value="8">September</option>
-            <option value="9">November</option>
-            <option value="10">October</option>
-            <option value="11">December</option>
-        </select>
 
-        <select class="col-sm-2 dropdown" [(ngModel)]="worktime.currentYear">
-            <option *ngFor="let year of worktime.availableYears" [ngValue]="year">{{year}}</option>
-        </select>
-        <visible-toggle class="col-sm-1" [(isVisible)]="worktime.isExpand"></visible-toggle>
+        <div class="label-control-container col-md-4 col-lg-1">
+            <label for="visible">Show All</label>
+            <visible-toggle id="visible" [(isVisible)]="worktime.isExpand"></visible-toggle>
+        </div>
+
+        <div class="label-control-container col-md-4 col-lg-2">
+            <label for="year">Year</label>
+            <select id="year" class="dropdown" [(ngModel)]="worktime.currentYear">
+                <option *ngFor="let year of worktime.availableYears" [ngValue]="year">{{year}}</option>
+            </select>
+        </div>
+
+        <div class="label-control-container col-md-4 col-lg-2">
+            <label for="month">Month</label>
+            <select id="month" class="dropdown" [(ngModel)]="worktime.currentMonth">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">November</option>
+                <option value="10">October</option>
+                <option value="11">December</option>
+            </select>
+        </div>
+
+
+        <div class="label-control-container col-md-3 offset-lg-3 col-lg-1">
+            <label for="actualtime">Actual Time</label>
+            <div id="actualtime">{{month.actualworktime.hours | number:'2.0'}}:{{month.actualworktime.minutes | number:'2.0'}}</div>
+        </div>
+
+        <div class="label-control-container col-md-3 col-lg-1">
+            <label for="actualmoney">Actual Payoff</label>
+            <div id="actualmoney">{{month.actualmoney}}€</div>
+        </div>
+
+        <div class="label-control-container col-md-3 col-lg-1">
+            <label for="targettime">Target Time</label>
+            <div id="targettime">{{month.targetworktime.hours | number:'2.0'}}:{{month.actualworktime.minutes | number:'2.0'}}</div>
+        </div>
+
+        <div class="label-control-container col-md-3 col-lg-1">
+            <label for="targetmoney">Target Payoff</label>
+            <div id="targetmoney">{{month.targetmoney}}€</div>
+        </div>
+
     </div>
 
-    <div class="row text-center">
-        <div class="col">Arbeiten</div>
-        <div class="col header-border">Datum</div>
-        <div class="col header-border">Wochentag</div>
-        <div class="col header-border">Start</div>
-        <div class="col header-border">Ende</div>
-        <div class="col header-border">Pause</div>
-        <div class="col header-border">Arbeitszeit Ist</div>
-        <div class="col header-border">Arbeitszeit Soll</div>
+
+    <div class="header-row row text-center">
+        <div class="col-md-3 col-xl-1">Work</div>
+        <div class="col-md-3 col-xl-1 header-border">Date</div>
+        <div class="col-md-3 col-xl-1 header-border">Day</div>
+        <div class="col-md-3 col-xl header-border">Start</div>
+        <div class="col-md-3 col-xl header-border">End</div>
+        <div class="col-md-3 col-xl header-border">Break</div>
+        <div class="col-md-3 col-xl header-border">Actual Time</div>
+        <div class="col-md-3 col-xl header-border">Target Time</div>
     </div>
 
-    <app-week *ngFor='let week of month.weeks' [(week)]="week"></app-week>
+    <app-week *ngFor='let week of month.weeks' [(week)]="week" (weekChanged)="changed()"></app-week>
 </div>

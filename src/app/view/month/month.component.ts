@@ -24,4 +24,8 @@ export class MonthComponent implements OnInit {
     this.month = this.worktime.month;
     this.month.createWeeks();
   }
+
+  changed() {
+    this.worktimeController.monthController.calcTimeSum(this.month, this.worktime.wage);
+  }
 }
