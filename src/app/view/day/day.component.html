@@ -1,21 +1,21 @@
 <div class="day-row row text-center" [ngClass]="{'not-visible': day.active == false && worktime.isExpand == false}">
-    <div class="col-md-3 col-xl-1 slider-container">
+    <div class="col-sm-6 col-md-3 col-xl-1 slider-container">
         <slider [(inputModel)]="day.active"></slider>
     </div>
 
-    <div class="col-md-3 col-xl-1 date-container">
+    <div class="col-sm-6 col-md-3 col-xl-1 date-container">
         <div>{{day.date | date}}</div>
     </div>
 
-    <div class="col-md-3 col-xl-1 weekday-container">
+    <div class="col-sm-6 col-md-3 col-xl-1 weekday-container">
         <div>{{day.date | date:'EEEE'}}</div>
     </div>
 
-    <time-input class="col-md-3 col-xl" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
-    <time-input class="col-md-3 col-xl" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
-    <time-input class="col-md-3 col-xl" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
-    <time-input class="col-md-3 col-xl" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
-    <time-input class="col-md-3 col-xl" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
+    <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.start" (timeModelChange)="timesChanged()"></time-input>
+    <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.end" (timeModelChange)="timesChanged()"></time-input>
+    <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
+    <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
+    <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
 
     <!-- <div class="row">
         <div class="col">{{day.active}}</div>

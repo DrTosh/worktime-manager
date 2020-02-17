@@ -1,13 +1,14 @@
 .not-visible {
     overflow: hidden;
     height: 0px !important;
+    min-height: 0px !important;
     margin: 0px !important;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
 .day-row {
-    height: 60px;
+    min-height: 60px;
 }
 
 .slider-container,

@@ -57,14 +57,14 @@
 
 
     <div class="header-row row text-center">
-        <div class="col-md-3 col-xl-1">Work</div>
-        <div class="col-md-3 col-xl-1 header-border">Date</div>
-        <div class="col-md-3 col-xl-1 header-border">Day</div>
-        <div class="col-md-3 col-xl header-border">Start</div>
-        <div class="col-md-3 col-xl header-border">End</div>
-        <div class="col-md-3 col-xl header-border">Break</div>
-        <div class="col-md-3 col-xl header-border">Actual Time</div>
-        <div class="col-md-3 col-xl header-border">Target Time</div>
+        <div class="col-sm-6 col-md-3 col-xl-1">Work</div>
+        <div class="col-sm-6 col-md-3 col-xl-1 header-border">Date</div>
+        <div class="col-sm-6 col-md-3 col-xl-1 header-border">Day</div>
+        <div class="col-sm-6 col-md-3 col-xl header-border">Start</div>
+        <div class="col-sm-6 col-md-3 col-xl header-border">End</div>
+        <div class="col-sm-6 col-md-3 col-xl header-border">Break</div>
+        <div class="col-sm-6 col-md-3 col-xl header-border">Actual Time</div>
+        <div class="col-sm-6 col-md-3 col-xl header-border">Target Time</div>
     </div>
 
     <app-week *ngFor='let week of month.weeks' [(week)]="week" (weekChanged)="changed()"></app-week>

@@ -13,7 +13,14 @@ body {
     background-color: #36393f;
     box-shadow: 10px 10px 5px black;
     margin: 10px 0px 0px 0px !important;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.day-row > *,
+.week-total > *,
+.month-info > *,
+.header-row > * {
+    margin-top: 10px;
 }
 
 .row .row {
