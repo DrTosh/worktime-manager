@@ -2,11 +2,11 @@
     <app-day *ngFor='let day of week.days' [(day)]="day" (dayChanged)="changed()"></app-day>
 
     <div class="row text-center week-total">
-        <div class="col-sm-12 col-md-6 col-xl-2">Week Sum</div>
-        <div class="col-sm-6 col-md-3 col-xl-1"></div>
-        <div class="col-sm-6 col-md-3 col-xl"></div>
-        <div class="col-sm-6 col-md-3 col-xl"></div>
-        <div class="col-sm-6 col-md-3 col-xl"></div>
+        <div class="col-sm-12 col-md-6 col-xl-2 week-sum">Week Sum</div>
+        <div class="col-xl-1 space-column"></div>
+        <div class="col-xl space-column"></div>
+        <div class="col-xl space-column"></div>
+        <div class="col-xl space-column"></div>
         <div class="col-sm-6 col-md-3 col-xl">{{week.actualworktime.hours | number:'2.0'}}:{{week.actualworktime.minutes | number:'2.0'}}</div>
         <div class="col-sm-6 col-md-3 col-xl">{{week.targetworktime.hours | number:'2.0'}}:{{week.targetworktime.minutes | number:'2.0'}}</div>
     </div>

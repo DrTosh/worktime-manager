@@ -1,9 +1,16 @@
-.week-container {
-    /* background: red; */
-    /* box-shadow: 10px 10px 5px #aaaaaa; */
-}
-
 .week-total {
     border-top: 2px solid gray;
     font-size: x-large;
+}
+
+@media (min-width: 768px) {
+    .week-sum {
+        text-align: left;
+    }
+}
+
+@media (max-width: 1200px) {
+    .space-column {
+        display: none;
+    }
 }
