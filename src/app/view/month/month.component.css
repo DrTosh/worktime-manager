@@ -3,10 +3,6 @@ h1 {
     width: 100%;
 }
 
-.header-border {
-    border-left: 1px solid grey;
-}
-
 .main-container {
     margin: 25px;
 }
@@ -51,4 +47,22 @@ visible-toggle {
 #targetmoney {
     font-size: x-large;
     color: #59f37d;
+}
+
+@media (min-width: 1200px) {
+    .header-row *:not(:first-child) {
+        border-left: 1px solid grey;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header-row *:not(:nth-child(4n + 1)) {
+        border-left: 1px solid grey;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .header-row *:nth-child(2n) {
+        border-left: 1px solid grey;
+    }
 }
