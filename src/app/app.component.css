@@ -1,0 +1,12 @@
+app-title-bar::ng-deep div {
+    height: 25px;
+}
+
+app-month::ng-deep>div {
+    height: calc(100vh - 25px - 5px);
+    overflow: auto;
+}
+
+app-footer::ng-deep div {
+    height: 5px;
+}

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class WorkTime {
-    month: Month = new Month(2020, 2);
+    month: Month;
     isExpand: boolean;
     currentMonth: number;
     currentYear: number;
@@ -12,10 +12,10 @@ export class WorkTime {
     wage: number;
 
     constructor() {
-        this.month = new Month(2020, 2);
         this.isExpand = false;
+        this.wage = 15;
         this.currentMonth = new Date().getMonth();
         this.currentYear = new Date().getFullYear();
-        this.wage = 15;
+        this.month = new Month(this.currentYear, this.currentMonth);
     }
 }

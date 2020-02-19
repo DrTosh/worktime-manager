@@ -1,0 +1,4 @@
+:host>div {
+    -webkit-app-region: drag;
+    background: #242529;
+}

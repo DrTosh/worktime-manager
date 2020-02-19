@@ -9,6 +9,7 @@ let appWindow
 
 function initWindow() {
     appWindow = new BrowserWindow({
+        frame: false,
         width: 1000,
         height: 800,
         webPreferences: {
@@ -26,7 +27,7 @@ function initWindow() {
     );
 
     // Initialize the DevTools.
-    appWindow.webContents.openDevTools()
+    // appWindow.webContents.openDevTools()
 
     appWindow.on('closed', function() {
         appWindow = null

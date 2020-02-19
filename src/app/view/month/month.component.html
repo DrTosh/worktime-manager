@@ -9,14 +9,14 @@
 
         <div class="label-control-container col-md-4 col-lg-2">
             <label for="year">Year</label>
-            <select id="year" class="dropdown" [(ngModel)]="worktime.currentYear">
+            <select id="year" class="dropdown" [(ngModel)]="worktime.currentYear" (ngModelChange)="reloadWeeks()">
                 <option *ngFor="let year of worktime.availableYears" [ngValue]="year">{{year}}</option>
             </select>
         </div>
 
         <div class="label-control-container col-md-4 col-lg-2">
             <label for="month">Month</label>
-            <select id="month" class="dropdown" [(ngModel)]="worktime.currentMonth">
+            <select id="month" class="dropdown" [(ngModel)]="worktime.currentMonth" (ngModelChange)="reloadWeeks()">
                 <option value="0">January</option>
                 <option value="1">February</option>
                 <option value="2">March</option>

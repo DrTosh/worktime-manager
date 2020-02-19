@@ -14,6 +14,8 @@ import { WorkTime } from './model/worktime';
 import { WorkTimeController } from './controller/worktime-controller';
 import { TimeInputComponent } from './view/components/time-input/time-input.component';
 import { VisibleToggleComponent } from './view/components/visible-toggle/visible-toggle.component';
+import { TitleBarComponent } from './view/title-bar/title-bar.component';
+import { FooterComponent } from './view/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { VisibleToggleComponent } from './view/components/visible-toggle/visible
     SliderComponent,
     WeekComponent,
     TimeInputComponent,
-    VisibleToggleComponent
+    VisibleToggleComponent,
+    TitleBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
