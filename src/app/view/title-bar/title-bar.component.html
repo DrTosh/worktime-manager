@@ -1,3 +1,11 @@
-<div>
-    <button (click)="close()">X</button>
+<div class="title-bar">
+    <div class="button hide-button" (click)="hide_show()">
+        <i class="material-icons">remove</i>
+    </div>
+    <div class="button maximize-button" (click)="min_max()">
+        <i class="material-icons">crop_square</i>
+    </div>
+    <div class="button close-button" (click)="close()">
+        <i class="material-icons">close</i>
+    </div>
 </div>

@@ -40,4 +40,8 @@ export class DayComponent implements OnInit {
     this.worktimeController.dayController.calcByWorkTime(this.day);
     this.dayChanged.emit(this.day);
   }
+
+  hello() {
+    console.log("hello");
+  }
 }

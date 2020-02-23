@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-declare var electron: any;
+import { app, BrowserWindow } from 'electron'
 
 @Component({
   selector: 'app-title-bar',
@@ -10,11 +9,9 @@ declare var electron: any;
 export class TitleBarComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit() { }
 
   close() {
-    var app = electron.remote.app;
-    app.app.quit();
+    app.quit();
   }
 }
