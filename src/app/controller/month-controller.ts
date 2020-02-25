@@ -13,4 +13,9 @@ export class MonthController {
         month.actualmoney = month.actualworktime.toNumber() * wage;
         month.targetmoney = month.targetworktime.toNumber() * wage;
     }
+
+    readFile() {
+        console.log(electron.remote.app.hasFile());
+        console.log(electron.remote.app.readFile());
+    }
 }

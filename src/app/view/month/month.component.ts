@@ -19,6 +19,7 @@ export class MonthComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.worktimeController.monthController.readFile();
     this.month = this.worktime.month;
     this.month.createWeeks();
   }

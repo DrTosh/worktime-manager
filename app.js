@@ -1,52 +1,64 @@
 const {
     app,
     BrowserWindow
-} = require('electron')
-const url = require("url");
-const path = require("path");
+  } = require('electron');
 
-let appWindow
-
-function initWindow() {
+  const url = require("url");
+  const path = require("path");
+  
+  let appWindow;
+  
+  function initWindow() {
     appWindow = new BrowserWindow({
-        frame: false,
-        width: 1000,
-        height: 800,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    })
+      show: false,
+      frame: false,
+      webPreferences: {
+        nodeIntegration: true
+      }
+    });
 
+    appWindow.maximize();
+    
     // Electron Build Path
     appWindow.loadURL(
         url.format({
-            pathname: path.join(__dirname, `/dist/index.html`),
+            pathname: path.join(__dirname, '/dist/index.html'),
             protocol: "file:",
             slashes: true
         })
     );
-
+        
+    appWindow.show();
     // Initialize the DevTools.
     // appWindow.webContents.openDevTools()
-
-    appWindow.on('closed', function() {
-        appWindow = null
-    })
-}
-
-app.on('ready', initWindow)
-
-// Close when all windows are closed.
-app.on('window-all-closed', function() {
-
+  
+    appWindow.on('closed', function () {
+      appWindow = null
+    });
+  }
+  
+  app.on('ready', initWindow);
+  
+  // Close when all windows are closed.
+  app.on('window-all-closed', function () {
+  
     // On macOS specific close process
     if (process.platform !== 'darwin') {
-        app.quit()
+      app.quit();
     }
-})
-
-app.on('activate', function() {
+  });
+  
+  app.on('activate', function () {
     if (win === null) {
-        initWindow()
+      initWindow();
     }
-})
+  });
+
+  app.hasFile = function () {
+    return true;
+  }
+
+  app.readFile = function () {
+    return "fileContents";
+  }
+

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { app, BrowserWindow } from 'electron'
 
 @Component({
   selector: 'app-title-bar',
@@ -11,7 +10,19 @@ export class TitleBarComponent implements OnInit {
   constructor() { }
   ngOnInit() { }
 
+  hide_show() {
+    electron.remote.BrowserWindow.getFocusedWindow().minimize();
+  }
+
+  min_max() {
+    if (electron.remote.BrowserWindow.getFocusedWindow().isMaximized()) {
+      electron.remote.BrowserWindow.getFocusedWindow().unmaximize()
+    } else {
+      electron.remote.BrowserWindow.getFocusedWindow().maximize();
+    }
+  }
+
   close() {
-    app.quit();
+    electron.remote.app.quit();
   }
 }

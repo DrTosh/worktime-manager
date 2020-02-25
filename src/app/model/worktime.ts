@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Month } from './month';
-import { Observable } from 'rxjs';
 
 @Injectable()
 export class WorkTime {
