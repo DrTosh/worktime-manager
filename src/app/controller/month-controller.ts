@@ -14,8 +14,8 @@ export class MonthController {
             this.timeController.add(month.targetworktime, week.targetworktime);
         });
 
-        month.actualmoney = this.timeController.toNumber(month.actualworktime) * wage;
-        month.targetmoney = this.timeController.toNumber(month.targetworktime) * wage;
+        month.actualmoney = Math.round(this.timeController.toNumber(month.actualworktime) * wage * 100) / 100;
+        month.targetmoney = Math.round(this.timeController.toNumber(month.targetworktime) * wage * 100) / 100;
     }
 
     public createWeeks(month: Month) {

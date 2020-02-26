@@ -8,7 +8,7 @@
         <div class="label-control-container col-md-4 col-lg-2">
             <label for="year">Year</label>
             <select id="year" class="dropdown" [(ngModel)]="worktime.currentYear" (ngModelChange)="reloadWeeks()">
-                <option *ngFor="let year of worktime.availableYears" [ngValue]="year">{{year}}</option>
+                <option *ngFor="let y of worktime.availableYears; let i = index" [ngValue]="worktime.availableYears[i]">{{y}}</option>
             </select>
         </div>
 
@@ -65,5 +65,5 @@
         <div class="col-sm-6 col-md-3 col-xl">Target Time</div>
     </div>
 
-    <app-week *ngFor='let week of worktime.month.weeks' [(week)]="week" (weekChanged)="changed()"></app-week>
+    <app-week *ngFor='let w of worktime.month.weeks; let i = index' [(week)]="worktime.month.weeks[i]" (weekChanged)="changed()"></app-week>
 </div>

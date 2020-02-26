@@ -10,7 +10,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "start:electron": "ng build --base-href ./ && electron .",
-        "build:electron": "electron-packager . worktime-manager --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Worktime Manager\""
+        "build:electron": "ng build --prod --base-href ./ && electron-packager . worktime-manager --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/favicon.ico --prune=true --out=release-builds --version-string.CompanyName=DrTosh --version-string.FileDescription=DrTosh --version-string.ProductName=\"Worktime Manager\""
     },
     "private": true,
     "dependencies": {
