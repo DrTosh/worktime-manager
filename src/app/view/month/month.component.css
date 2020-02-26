@@ -7,6 +7,10 @@ h1 {
     padding: 25px;
 }
 
+.month-info {
+    padding-bottom: 50px;
+}
+
 visible-toggle {
     padding: auto;
     text-align: center;

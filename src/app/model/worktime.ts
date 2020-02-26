@@ -3,18 +3,21 @@ import { Month } from './month';
 
 @Injectable()
 export class WorkTime {
+    months: Month[];
     month: Month;
     isExpand: boolean;
     currentMonth: number;
     currentYear: number;
-    availableYears: number[] = [2019, 2020];
+    availableYears: number[];
     wage: number;
 
     constructor() {
         this.isExpand = false;
-        this.wage = 15;
+        this.wage = 14;
         this.currentMonth = new Date().getMonth();
         this.currentYear = new Date().getFullYear();
         this.month = new Month(this.currentYear, this.currentMonth);
+        this.months = [this.month];
+        this.availableYears = [this.currentYear];
     }
 }

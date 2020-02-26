@@ -1,6 +1,6 @@
 <div class="day-row row text-center" [ngClass]="{'not-visible': day.active == false && worktime.isExpand == false}">
     <div class="col-sm-6 col-md-3 col-xl-1 slider-container">
-        <slider [(inputModel)]="day.active"></slider>
+        <slider [(inputModel)]="day.active" (inputModelChange)="dayChanged.emit(day)"></slider>
     </div>
 
     <div class="col-sm-6 col-md-3 col-xl-1 date-container">
@@ -16,14 +16,4 @@
     <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.break" (timeModelChange)="breakChanged()"></time-input>
     <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.actualworktime" (timeModelChange)="actualTimeChanged()"></time-input>
     <time-input class="col-sm-6 col-md-3 col-xl" [(time)]="day.targetworktime" (timeModelChange)="dayChanged.emit(day)"></time-input>
-
-    <!-- <div class="row">
-        <div class="col">{{day.active}}</div>
-        <div class="col">{{day.date | date}}</div>
-        <div class="col">{{day.start | date:'HH:mm'}}</div>
-        <div class="col">{{day.end | date:'HH:mm'}}</div>
-        <div class="col">{{day.break | date:'HH:mm'}}</div>
-        <div class="col">{{day.actualworktime | date:'HH:mm'}}</div>
-        <div class="col">{{day.targetworktime | date:'HH:mm'}}</div>
-    </div> -->
 </div>

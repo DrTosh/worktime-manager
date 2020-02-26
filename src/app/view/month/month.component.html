@@ -1,7 +1,5 @@
 <div class="main-container">
     <div class="row month-info">
-        <h1>Worktime Manager</h1>
-
         <div class="label-control-container col-md-4 col-lg-1">
             <label for="visible">Show All</label>
             <visible-toggle id="visible" [(isVisible)]="worktime.isExpand"></visible-toggle>
@@ -35,22 +33,22 @@
 
         <div class="label-control-container col-md-3 offset-lg-3 col-lg-1">
             <label for="actualtime">Actual Time</label>
-            <div id="actualtime">{{month.actualworktime.hours | number:'2.0'}}:{{month.actualworktime.minutes | number:'2.0'}}</div>
+            <div id="actualtime">{{worktime.month.actualworktime.hours | number:'2.0'}}:{{worktime.month.actualworktime.minutes | number:'2.0'}}</div>
         </div>
 
         <div class="label-control-container col-md-3 col-lg-1">
             <label for="actualmoney">Actual Payoff</label>
-            <div id="actualmoney">{{month.actualmoney}}€</div>
+            <div id="actualmoney">{{worktime.month.actualmoney | number:'0.2'}}€</div>
         </div>
 
         <div class="label-control-container col-md-3 col-lg-1">
             <label for="targettime">Target Time</label>
-            <div id="targettime">{{month.targetworktime.hours | number:'2.0'}}:{{month.actualworktime.minutes | number:'2.0'}}</div>
+            <div id="targettime">{{worktime.month.targetworktime.hours | number:'2.0'}}:{{worktime.month.actualworktime.minutes | number:'2.0'}}</div>
         </div>
 
         <div class="label-control-container col-md-3 col-lg-1">
             <label for="targetmoney">Target Payoff</label>
-            <div id="targetmoney">{{month.targetmoney}}€</div>
+            <div id="targetmoney">{{worktime.month.targetmoney | number:'0.2'}}€</div>
         </div>
 
     </div>
@@ -67,5 +65,5 @@
         <div class="col-sm-6 col-md-3 col-xl">Target Time</div>
     </div>
 
-    <app-week *ngFor='let week of month.weeks' [(week)]="week" (weekChanged)="changed()"></app-week>
+    <app-week *ngFor='let week of worktime.month.weeks' [(week)]="week" (weekChanged)="changed()"></app-week>
 </div>

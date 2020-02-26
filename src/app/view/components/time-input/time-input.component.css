@@ -17,6 +17,7 @@ input {
     border-radius: 5px;
     -moz-appearance: textfield;
     text-align: center;
+    outline: none;
 }
 
 input::-webkit-outer-spin-button,

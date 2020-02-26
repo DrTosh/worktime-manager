@@ -1,9 +1,21 @@
+* {
+    user-select: none;
+}
+
 .title-bar {
     -webkit-app-region: drag;
     background: #242529;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+}
+
+.title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    line-height: 32px;
+    padding-left: 150px;
 }
 
 .button {

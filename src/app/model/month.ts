@@ -20,24 +20,4 @@ export class Month {
         this.targetworktime = new Time(0, 0);
         this.targetmoney = 0;
     }
-
-    public createWeeks() {
-        let date = new Date(this.year, this.month, 1);
-        let week = new Week();
-        this.weeks.push(week);
-
-        while (date.getMonth() == this.month) {
-            let day = new Day(date);
-            week.days.push(day);
-
-            // 0 == Sunday
-            if (date.getDay() == 0) {
-                week = new Week();
-                this.weeks.push(week);
-            }
-
-            date.setDate(date.getDate() + 1);
-            // console.log(date);
-        }
-    }
 }
