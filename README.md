@@ -1,27 +1,14 @@
-# WorktimeManager
+# Worktime Manager [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/drtosh/WorktimeManager/master/LICENSE.MIT)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
+## About
+Just a little Tool to manage Worktime. It is build as cross-platform desktop application with Electron and javascript framework Angular.
 
-## Development server
+## Config / Data File
+The database file is located in the UserApp path. 
+In Windows for example it is at C:\Users\<UserName>\AppData\Roaming\worktime-manager\worktime.json
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+All Data is stored as Json Objects in here. 
+The hourly wage can be changed here.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Downloads
+![Windows](https://raw.githubusercontent.com/drtosh/WorktimeManager/master/release/windows/worktime-manager.zip)
