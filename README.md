@@ -15,7 +15,7 @@ All Data is stored as Json Objects in here.
 The hourly wage can be changed here.
 
 ## Downloads
-[Windows v0.1](https://github.com/DrTosh/worktime-manager/blob/master/release/windows/worktime-manager.zip)
+[Windows v0.1](https://github.com/DrTosh/worktime-manager/raw/master/release/windows/worktime-manager.zip)
 
 ## Screenshot
 ![screenshot](https://github.com/DrTosh/worktime-manager/blob/master/release/screenshot.png)
