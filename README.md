@@ -5,14 +5,17 @@ Just a little Tool to manage Worktime. It is build as cross-platform desktop app
 
 ## Config / Data File
 The database file is located in the UserApp path. 
-In Windows for example it is at C:\Users\<UserName>\AppData\Roaming\worktime-manager\worktime.json
+In Windows for example it is at 
+
+```
+C:\Users\<UserName>\AppData\Roaming\worktime-manager\worktime.json
+```
 
 All Data is stored as Json Objects in here. 
 The hourly wage can be changed here.
 
 ## Downloads
-[Windows v0.1](https://raw.githubusercontent.com/drtosh/WorktimeManager/master/release/windows/worktime-manager.zip)
+[Windows v0.1](https://github.com/DrTosh/worktime-manager/blob/master/release/windows/worktime-manager.zip)
 
-## Example Screenshot
-## Downloads
+## Screenshot
 ![screenshot](https://github.com/DrTosh/worktime-manager/blob/master/release/screenshot.png)
