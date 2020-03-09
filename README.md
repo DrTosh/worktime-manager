@@ -15,4 +15,4 @@ The hourly wage can be changed here.
 
 ## Example Screenshot
 ## Downloads
-![screenshot](https://raw.githubusercontent.com/drtosh/WorktimeManager/master/release/screenshot.png)
+![screenshot](https://github.com/DrTosh/worktime-manager/blob/master/release/screenshot.png)
