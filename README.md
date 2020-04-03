@@ -14,8 +14,8 @@ C:\Users\<UserName>\AppData\Roaming\worktime-manager\worktime.json
 All Data is stored as Json Objects in here. 
 The hourly wage can be changed here as well.
 
-## Downloads
-[Windows v0.1](https://github.com/DrTosh/worktime-manager/raw/master/release/windows/worktime-manager.zip)
+## Download latest Release
+[Windows](https://github.com/DrTosh/worktime-manager/releases/download/v0.2/worktime-manager.zip)
 
 ## Screenshot
 ![screenshot](https://github.com/DrTosh/worktime-manager/blob/master/release/screenshot.png)
