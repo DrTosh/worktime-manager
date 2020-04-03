@@ -11,6 +11,10 @@
     min-height: 60px;
 }
 
+.actual-day {
+    border: 2px solid yellow;
+}
+
 .slider-container,
 .date-container,
 .weekday-container {

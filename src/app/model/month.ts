@@ -1,5 +1,4 @@
 import { Week } from './week';
-import { Day } from './day';
 import { Time } from './time';
 
 export class Month {

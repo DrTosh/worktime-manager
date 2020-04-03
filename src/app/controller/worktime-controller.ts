@@ -4,12 +4,14 @@ import { DayController } from './day-controller';
 import { Injectable } from '@angular/core';
 import { WorkTime } from '../model/worktime';
 import { Month } from '../model/month';
+import { TimeController } from './time-controller';
 
 @Injectable()
 export class WorkTimeController {
     monthController: MonthController = new MonthController();
     weekController: WeekController = new WeekController();
     dayController: DayController = new DayController();
+    timeController: TimeController = new TimeController();
 
     saveWorkTime(worktime: WorkTime) {
         mainProcess.writeFile(JSON.stringify(worktime, null, 4));
@@ -34,18 +36,20 @@ export class WorkTimeController {
     }
 
     loadMonth(worktime: WorkTime, year: number, month: number) {
+        // delete old entrys
+        worktime.months.filter(m => m.year !== worktime.month.year && m.month !== worktime.month.month);
+        worktime.months.push(worktime.month);
+
         let found = false;
         worktime.months.forEach(m => {
             if (m.year == year && m.month == month) {
                 worktime.month = m;
                 found = true;
-                console.log(worktime.month);
             }
         });
 
         if (!found) {
             worktime.month = new Month(year, month);
-            worktime.months.push(worktime.month);
         }
     }
 }

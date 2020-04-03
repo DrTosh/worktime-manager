@@ -16,10 +16,13 @@ export class DayController {
             if (this.timeController.gt(time, new Time(9, 0)))
                 this.timeController.add(minbreak, new Time(0, 15));
 
-            if (this.timeController.gt(minbreak, day.break))
+            if (this.timeController.eq(day.break, new Time(0,  0))
+            ||  this.timeController.eq(day.break, new Time(0, 30))
+            ||  this.timeController.eq(day.break, new Time(0, 45))) {
                 day.break = minbreak;
+            }
 
-            this.timeController.sub(time, minbreak);
+            this.timeController.sub(time, day.break);
             day.actualworktime = time;
         }
     }
@@ -39,8 +42,11 @@ export class DayController {
         if (this.timeController.gt(day.actualworktime, new Time(9, 0)))
             this.timeController.add(minbreak, new Time(0, 15));
 
-        if (this.timeController.gt(minbreak, day.break))
+        if (this.timeController.eq(day.break, new Time(0,  0))
+        ||  this.timeController.eq(day.break, new Time(0, 30))
+        ||  this.timeController.eq(day.break, new Time(0, 45))) {
             day.break = minbreak;
+        }
 
         let endTime = new Time(day.start.hours, day.start.minutes);
         endTime = new Time(day.start.hours, day.start.minutes);
