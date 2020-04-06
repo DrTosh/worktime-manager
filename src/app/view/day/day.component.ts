@@ -38,8 +38,10 @@ export class DayComponent implements OnInit {
             if (self.day.start.hours !== 0) {
               let hours = new Date().getHours();
               if (hours >= self.day.end.hours) {
-                if (hours !== self.day.end.hours) 
-                self.day.end.hours = hours;
+                if (hours !== self.day.end.hours) {
+                  self.day.end.hours = hours;
+                  self.day.end.minutes = 0;
+                }                  
                     
                 let minutes = new Date().getMinutes();
                 if (minutes > self.day.end.minutes) {
