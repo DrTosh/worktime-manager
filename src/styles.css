@@ -52,6 +52,7 @@ body {
 
 
 /* Begin material google font */
+
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -81,4 +82,6 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga';
 }
+
+
 /* End material google font */

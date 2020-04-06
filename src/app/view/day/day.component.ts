@@ -35,20 +35,29 @@ export class DayComponent implements OnInit {
 
           var self = this;
           window.setInterval(function() {
+            var isChanged = false;
             if (self.day.start.hours !== 0) {
               let hours = new Date().getHours();
               if (hours >= self.day.end.hours) {
                 if (hours !== self.day.end.hours) {
                   self.day.end.hours = hours;
                   self.day.end.minutes = 0;
+                  isChanged = true;
                 }                  
                     
                 let minutes = new Date().getMinutes();
                 if (minutes > self.day.end.minutes) {
                   self.day.end.minutes = minutes;
+                  isChanged = true;
                 }
               }
-            }    
+            }   
+            
+            if (isChanged) {
+              // timesChanged
+              self.worktimeController.dayController.calcByTimeSpan(self.day);
+              self.dayChanged.emit(self.day);
+            }
           }, 10000);
         }
       }
