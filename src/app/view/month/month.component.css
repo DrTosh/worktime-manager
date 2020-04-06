@@ -9,6 +9,7 @@ h1 {
 
 .month-info {
     padding-bottom: 50px;
+    transition: none !important;
 }
 
 visible-toggle {
@@ -17,6 +18,17 @@ visible-toggle {
     align-content: center;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.month-info-sticky {
+    margin-bottom: 70px !important;
+}
+
+.header-sticky {
+    position: fixed;
+    top: 25px;
+    width: calc(100% - 25px * 2 - 3px);
+    z-index: 1;
 }
 
 .dropdown {

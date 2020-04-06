@@ -1,5 +1,5 @@
-<div class="main-container">
-    <div class="row month-info">
+<div class="main-container" (scroll)="onScroll($event)">
+    <div id="month-info" class="row month-info">
         <div class="label-control-container col-md-4 col-lg-1">
             <label for="visible">Show All</label>
             <visible-toggle id="visible" [(isVisible)]="worktime.isExpand"></visible-toggle>
@@ -54,7 +54,7 @@
     </div>
 
 
-    <div class="header-row row text-center">
+    <div id="header" class="header-row row text-center">
         <div class="col-sm-6 col-md-3 col-xl-1">Work</div>
         <div class="col-sm-6 col-md-3 col-xl-1">Date</div>
         <div class="col-sm-6 col-md-3 col-xl-1">Day</div>
