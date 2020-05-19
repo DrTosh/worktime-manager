@@ -1,18 +1,23 @@
 <div class="main-container" (scroll)="onScroll($event)">
     <div id="month-info" class="row month-info">
-        <div class="label-control-container col-md-4 col-lg-1">
+        <div class="label-control-container col-md-3 col-lg-1">
             <label for="visible">Show All</label>
             <visible-toggle id="visible" [(isVisible)]="worktime.isExpand"></visible-toggle>
         </div>
 
-        <div class="label-control-container col-md-4 col-lg-2">
+        <div class="label-control-container col-md-3 col-lg-1">
+            <label for="visible">Auto End Time</label>
+            <slider class="auto-end-time" [(inputModel)]="worktime.isAutoEndTime"></slider>
+        </div>
+
+        <div class="label-control-container col-md-3 col-lg-2">
             <label for="year">Year</label>
             <select id="year" class="dropdown" [(ngModel)]="worktime.currentYear" (ngModelChange)="reloadWeeks()">
                 <option *ngFor="let y of worktime.availableYears; let i = index" [ngValue]="worktime.availableYears[i]">{{y}}</option>
             </select>
         </div>
 
-        <div class="label-control-container col-md-4 col-lg-2">
+        <div class="label-control-container col-md-3 col-lg-2">
             <label for="month">Month</label>
             <select id="month" class="dropdown" [(ngModel)]="worktime.currentMonth" (ngModelChange)="reloadWeeks()">
                 <option value="0">January</option>
@@ -30,8 +35,7 @@
             </select>
         </div>
 
-
-        <div class="label-control-container col-md-3 offset-lg-3 col-lg-1">
+        <div class="label-control-container col-md-3 offset-lg-2 col-lg-1">
             <label for="actualtime">Actual Time</label>
             <div id="actualtime">{{worktime.month.actualworktime.hours | number:'2.0'}}:{{worktime.month.actualworktime.minutes | number:'2.0'}}</div>
         </div>
@@ -43,7 +47,7 @@
 
         <div class="label-control-container col-md-3 col-lg-1">
             <label for="targettime">Target Time</label>
-            <div id="targettime">{{worktime.month.targetworktime.hours | number:'2.0'}}:{{worktime.month.actualworktime.minutes | number:'2.0'}}</div>
+            <div id="targettime">{{worktime.month.targetworktime.hours | number:'2.0'}}:{{worktime.month.targetworktime.minutes | number:'2.0'}}</div>
         </div>
 
         <div class="label-control-container col-md-3 col-lg-1">

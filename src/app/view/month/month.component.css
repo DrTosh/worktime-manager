@@ -20,6 +20,10 @@ visible-toggle {
     margin-bottom: auto;
 }
 
+.auto-end-time {
+    margin: auto;
+}
+
 .month-info-sticky {
     margin-bottom: 70px !important;
 }
