@@ -5,7 +5,7 @@ import { WorkTimeController } from "src/app/controller/worktime-controller";
 @Component({
   selector: "app-month",
   templateUrl: "./month.component.html",
-  styleUrls: ["./month.component.css"]
+  styleUrls: ["./month.component.css"],
 })
 export class MonthComponent implements OnInit {
   @HostListener("window:beforeunload") doSomething() {
@@ -41,12 +41,11 @@ export class MonthComponent implements OnInit {
   }
 
   onScroll(event) {
-    console.log("scrolled");
     var header = document.getElementById("header");
     var month_info = document.getElementById("month-info");
-    console.log(event.target.scrollTop);
+
     if (event.target.scrollTop >= 205) {
-      header.classList.add("header-sticky")
+      header.classList.add("header-sticky");
       month_info.classList.add("month-info-sticky");
     } else {
       header.classList.remove("header-sticky");
